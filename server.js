@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = parseInt(process.env.PORT, 10) || 3001;
+const PORT = 3000;
 const MIME_TYPES = {
   '.html': 'text/html',
   '.css': 'text/css',
@@ -16,8 +16,7 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
-  let filePath = path.join(__dirname, reqPath === '/' ? 'index.html' : reqPath);
+  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
   const ext = path.extname(filePath).toLowerCase();
   const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
@@ -37,17 +36,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-function startServer(port) {
-  server.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-  }).on('error', (err) => {
-    if (err.code === 'EADDRINUSE') {
-      console.log(`Port ${port} is in use, trying ${port + 1}...`);
-      startServer(port + 1);
-    } else {
-      console.error(err);
-    }
-  });
-}
-
-startServer(PORT);
+server.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
+});
