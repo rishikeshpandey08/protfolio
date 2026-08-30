@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1017"/>
+      <stop offset="50%" stop-color="#141926"/>
+      <stop offset="100%" stop-color="#080b11"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c5cff"/>
+      <stop offset="50%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+    <filter id="blur-3" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad-3)"/>
+  <circle cx="250" cy="180" r="140" fill="#7c5cff" opacity="0.22" filter="url(#blur-3)"/>
+  <circle cx="600" cy="320" r="130" fill="#00f0ff" opacity="0.18" filter="url(#blur-3)"/>
+
+  <!-- Glass Container -->
+  <g transform="translate(60, 45)">
+    <rect width="680" height="410" rx="16" fill="#121624" fill-opacity="0.9" stroke="#252c42" stroke-width="1.5"/>
+    
+    <!-- Top bar -->
+    <rect width="680" height="44" rx="16" fill="#181d30" fill-opacity="0.95"/>
+    <circle cx="24" cy="22" r="5.5" fill="#ff5f56"/>
+    <circle cx="44" cy="22" r="5.5" fill="#ffbd2e"/>
+    <circle cx="64" cy="22" r="5.5" fill="#27c93f"/>
+    <text x="340" y="27" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">OmniPay — Global Multi-Currency Checkout &amp; Risk Intelligence</text>
+
+    <!-- Credit Card Mockup (Left Side) -->
+    <g transform="translate(35, 70)">
+      <!-- Sleek Card Element -->
+      <rect width="280" height="175" rx="14" fill="url(#card-grad)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <text x="24" y="38" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="1">OmniPay Platinum</text>
+      
+      <!-- Card Chip -->
+      <rect x="24" y="60" width="38" height="28" rx="5" fill="#ffd700" fill-opacity="0.85"/>
+      <line x1="36" y1="60" x2="36" y2="88" stroke="#cca100"/>
+      <line x1="24" y1="74" x2="62" y2="74" stroke="#cca100"/>
+      
+      <text x="24" y="125" fill="#ffffff" font-family="monospace" font-size="14" letter-spacing="3">•••• 8842 9012 3456</text>
+      <text x="24" y="152" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="10">CARDHOLDER</text>
+      <text x="24" y="165" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600">RISHIKESH PANDEY</text>
+      <text x="210" y="152" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="10">EXPIRES</text>
+      <text x="210" y="165" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11" font-weight="600">08/29</text>
+    </g>
+
+    <!-- Quick Stats Below Card -->
+    <g transform="translate(35, 265)">
+      <rect width="280" height="115" rx="10" fill="#161b2c" stroke="#252d44"/>
+      <text x="16" y="26" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="11">Global Transaction Volume</text>
+      <text x="16" y="55" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="700">$4.82M <tspan font-size="12" fill="#27c93f">+28.4%</tspan></text>
+      
+      <line x1="16" y1="72" x2="264" y2="72" stroke="#232a3e"/>
+      <text x="16" y="94" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">135+ Currencies • 99.999% SLA</text>
+    </g>
+
+    <!-- Checkout UI Form (Right Side) -->
+    <g transform="translate(345, 65)">
+      <rect width="300" height="315" rx="12" fill="#151929" stroke="#252c42"/>
+      <text x="20" y="32" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="700">Payment Breakdown</text>
+
+      <g transform="translate(20, 50)">
+        <text x="0" y="15" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="11">Subtotal (Enterprise Tier)</text>
+        <text x="260" y="15" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="end">$149.00 USD</text>
+
+        <text x="0" y="38" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="11">Estimated Tax</text>
+        <text x="260" y="38" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="end">$0.00</text>
+
+        <line x1="0" y1="55" x2="260" y2="55" stroke="#232a3e"/>
+
+        <text x="0" y="78" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Total Billed</text>
+        <text x="260" y="78" fill="#00f0ff" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="end">$149.00 USD</text>
+      </g>
+
+      <!-- Security Guarantee Pill -->
+      <g transform="translate(20, 160)">
+        <rect width="260" height="38" rx="6" fill="#0d111a" stroke="#27c93f" stroke-opacity="0.4"/>
+        <circle cx="18" cy="19" r="5" fill="#27c93f"/>
+        <text x="32" y="23" fill="#27c93f" font-family="system-ui, sans-serif" font-size="10" font-weight="600">256-Bit End-to-End Encryption Verified</text>
+      </g>
+
+      <!-- Pay Button -->
+      <g transform="translate(20, 215)">
+        <rect width="260" height="42" rx="8" fill="url(#card-grad)"/>
+        <text x="130" y="26" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Authorize &amp; Complete Payment →</text>
+      </g>
+    </g>
+
+  </g>
+</svg>

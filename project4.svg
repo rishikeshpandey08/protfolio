@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c16"/>
+      <stop offset="50%" stop-color="#12162a"/>
+      <stop offset="100%" stop-color="#070912"/>
+    </linearGradient>
+    <linearGradient id="neon-spiral" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff007f"/>
+      <stop offset="50%" stop-color="#7c5cff"/>
+      <stop offset="100%" stop-color="#00f0ff"/>
+    </linearGradient>
+    <filter id="blur-4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg-grad-4)"/>
+  <circle cx="200" cy="200" r="140" fill="#ff007f" opacity="0.15" filter="url(#blur-4)"/>
+  <circle cx="600" cy="250" r="140" fill="#00f0ff" opacity="0.18" filter="url(#blur-4)"/>
+
+  <!-- Glass Container -->
+  <g transform="translate(60, 45)">
+    <rect width="680" height="410" rx="16" fill="#111422" fill-opacity="0.9" stroke="#242b42" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect width="680" height="44" rx="16" fill="#171c30" fill-opacity="0.95"/>
+    <circle cx="24" cy="22" r="5.5" fill="#ff5f56"/>
+    <circle cx="44" cy="22" r="5.5" fill="#ffbd2e"/>
+    <circle cx="64" cy="22" r="5.5" fill="#27c93f"/>
+    <text x="340" y="27" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">NeuroCanvas — Generative WebGL Shader &amp; Vector Particle Engine</text>
+
+    <!-- Canvas Preview (Left Area) -->
+    <g transform="translate(25, 65)">
+      <rect width="410" height="315" rx="10" fill="#070913" stroke="#22283e"/>
+
+      <!-- Generative Geometric Shader Illusion -->
+      <g transform="translate(205, 155)">
+        <polygon points="0,-100 86,-50 86,50 0,100 -86,50 -86,-50" fill="none" stroke="url(#neon-spiral)" stroke-width="2.5" opacity="0.85"/>
+        <polygon points="0,-80 69,-40 69,40 0,80 -69,40 -69,-40" fill="none" stroke="#7c5cff" stroke-width="2" opacity="0.75" transform="rotate(20)"/>
+        <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="none" stroke="#00f0ff" stroke-width="2" opacity="0.65" transform="rotate(40)"/>
+        <polygon points="0,-40 35,-20 35,20 0,40 -35,20 -35,-20" fill="none" stroke="#ff007f" stroke-width="1.5" opacity="0.8" transform="rotate(60)"/>
+        <circle cx="0" cy="0" r="16" fill="#00f0ff" opacity="0.9"/>
+        <circle cx="0" cy="0" r="30" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="4 4"/>
+      </g>
+
+      <rect x="15" y="15" width="130" height="24" rx="4" fill="#151928" fill-opacity="0.8"/>
+      <text x="25" y="31" fill="#00f0ff" font-family="monospace" font-size="11">60.0 FPS • WebGL2</text>
+    </g>
+
+    <!-- Controls Panel (Right Area) -->
+    <g transform="translate(455, 65)">
+      <rect width="200" height="315" rx="10" fill="#141828" stroke="#242c44"/>
+      <text x="18" y="30" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Particle Parameters</text>
+
+      <!-- Slider 1 -->
+      <g transform="translate(18, 55)">
+        <text x="0" y="0" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="10">Particle Density (10k)</text>
+        <rect x="0" y="10" width="164" height="6" rx="3" fill="#252d48"/>
+        <rect x="0" y="10" width="120" height="6" rx="3" fill="#7c5cff"/>
+        <circle cx="120" cy="13" r="6" fill="#ffffff"/>
+      </g>
+
+      <!-- Slider 2 -->
+      <g transform="translate(18, 105)">
+        <text x="0" y="0" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="10">Wave Dispersion</text>
+        <rect x="0" y="10" width="164" height="6" rx="3" fill="#252d48"/>
+        <rect x="0" y="10" width="85" height="6" rx="3" fill="#00f0ff"/>
+        <circle cx="85" cy="13" r="6" fill="#ffffff"/>
+      </g>
+
+      <!-- Slider 3 -->
+      <g transform="translate(18, 155)">
+        <text x="0" y="0" fill="#8e9bb5" font-family="system-ui, sans-serif" font-size="10">Chromatic Aberration</text>
+        <rect x="0" y="10" width="164" height="6" rx="3" fill="#252d48"/>
+        <rect x="0" y="10" width="140" height="6" rx="3" fill="#ff007f"/>
+        <circle cx="140" cy="13" r="6" fill="#ffffff"/>
+      </g>
+
+      <!-- Export Button -->
+      <g transform="translate(18, 230)">
+        <rect width="164" height="38" rx="6" fill="#7c5cff" fill-opacity="0.2" stroke="#7c5cff"/>
+        <text x="82" y="24" fill="#e0e7ff" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">Export Shader / 4K PNG</text>
+      </g>
+    </g>
+
+  </g>
+</svg>
